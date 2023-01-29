@@ -31,6 +31,13 @@ let package = Package(
             ]
         ),
         .library(
+            name: "FirebaseAnalyticsOnDeviceConversion",
+            targets: [
+                "FirebaseAnalyticsOnDeviceConversion",
+                "GoogleAppMeasurementOnDeviceConversion"
+            ]
+        ),
+        .library(
             name: "FirebaseAuth",
             targets: [
                 "FirebaseAuth",
@@ -72,10 +79,10 @@ let package = Package(
     ],
     dependencies: [ ],
     targets: [
-        .binaryTarget(name: "BoringSSL-GRPC", path: "Frameworks/FirebaseFirestore/BoringSSL-GRPC.xcframework"),
-        .binaryTarget(name: "FBLPromises", path: "Frameworks/FirebaseAnalytics/FBLPromises.xcframework"),
+        // Firebase
         .binaryTarget(name: "FirebaseABTesting", path: "Frameworks/FirebaseABTesting/FirebaseABTesting.xcframework"),
         .binaryTarget(name: "FirebaseAnalytics", path: "Frameworks/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
+        .binaryTarget(name: "FirebaseAnalyticsOnDeviceConversion", path: "Frameworks/FirebaseAnalyticsOnDeviceConversion/FirebaseAnalyticsOnDeviceConversion.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsSwift", path: "Frameworks/FirebaseAnalytics/FirebaseAnalyticsSwift.xcframework"),
         .binaryTarget(name: "FirebaseAppCheckInterop", path: "Frameworks/FirebaseStorage/FirebaseAppCheckInterop.xcframework"),
         .binaryTarget(name: "FirebaseAuth", path: "Frameworks/FirebaseAuth/FirebaseAuth.xcframework"),
@@ -89,11 +96,18 @@ let package = Package(
         .binaryTarget(name: "FirebaseInstallations", path: "Frameworks/FirebaseAnalytics/FirebaseInstallations.xcframework"),
         .binaryTarget(name: "FirebaseSharedSwift", path: "Frameworks/FirebaseFirestore/FirebaseSharedSwift.xcframework"),
         .binaryTarget(name: "FirebaseStorage", path: "Frameworks/FirebaseStorage/FirebaseStorage.xcframework"),
+        
+        // Google
         .binaryTarget(name: "GTMSessionFetcher", path: "Frameworks/Common/GTMSessionFetcher.xcframework"),
         .binaryTarget(name: "GoogleAppMeasurement", path: "Frameworks/FirebaseAnalytics/GoogleAppMeasurement.xcframework"),
         .binaryTarget(name: "GoogleAppMeasurementIdentitySupport", path: "Frameworks/FirebaseAnalytics/GoogleAppMeasurementIdentitySupport.xcframework"),
+        .binaryTarget(name: "GoogleAppMeasurementOnDeviceConversion", path: "Frameworks/FirebaseAnalyticsOnDeviceConversion/GoogleAppMeasurementOnDeviceConversion.xcframework"),
         .binaryTarget(name: "GoogleDataTransport", path: "Frameworks/FirebaseCrashlytics/GoogleDataTransport.xcframework"),
         .binaryTarget(name: "GoogleUtilities", path: "Frameworks/FirebaseAnalytics/GoogleUtilities.xcframework"),
+        
+        // Other
+        .binaryTarget(name: "BoringSSL-GRPC", path: "Frameworks/FirebaseFirestore/BoringSSL-GRPC.xcframework"),
+        .binaryTarget(name: "FBLPromises", path: "Frameworks/FirebaseAnalytics/FBLPromises.xcframework"),
         .binaryTarget(name: "Libuv-gRPC", path: "Frameworks/FirebaseFirestore/Libuv-gRPC.xcframework"),
         .binaryTarget(name: "abseil", path: "Frameworks/FirebaseFirestore/abseil.xcframework"),
         .binaryTarget(name: "gRPC-C++", path: "Frameworks/FirebaseFirestore/gRPC-C++.xcframework"),
