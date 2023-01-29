@@ -64,6 +64,15 @@ let package = Package(
             ]
         ),
         .library(
+            name: "FirebaseDatabase",
+            targets: [
+                "FirebaseDatabase",
+                "FirebaseDatabaseSwift",
+                "FirebaseSharedSwift",
+                "leveldb-library"
+            ]
+        ),
+        .library(
             name: "FirebaseFirestore",
             targets: [
                 "abseil",
@@ -92,6 +101,8 @@ let package = Package(
     dependencies: [ ],
     targets: [
         // Firebase
+        .binaryTarget(name: "FirebaseDatabase", path: "Frameworks/FirebaseDatabase/FirebaseDatabase.xcframework"),
+        .binaryTarget(name: "FirebaseDatabaseSwift", path: "Frameworks/FirebaseDatabase/FirebaseDatabaseSwift.xcframework"),
         .binaryTarget(name: "FirebaseAppDistribution", path: "Frameworks/FirebaseAppDistribution/FirebaseAppDistribution.xcframework"),
         .binaryTarget(name: "FirebaseABTesting", path: "Frameworks/FirebaseABTesting/FirebaseABTesting.xcframework"),
         .binaryTarget(name: "FirebaseAnalytics", path: "Frameworks/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
@@ -108,7 +119,7 @@ let package = Package(
         .binaryTarget(name: "FirebaseFirestore", path: "Frameworks/FirebaseFirestore/FirebaseFirestore.xcframework"),
         .binaryTarget(name: "FirebaseFirestoreSwift", path: "Frameworks/FirebaseFirestore/FirebaseFirestoreSwift.xcframework"),
         .binaryTarget(name: "FirebaseInstallations", path: "Frameworks/FirebaseAnalytics/FirebaseInstallations.xcframework"),
-        .binaryTarget(name: "FirebaseSharedSwift", path: "Frameworks/FirebaseFirestore/FirebaseSharedSwift.xcframework"),
+        .binaryTarget(name: "FirebaseSharedSwift", path: "Frameworks/Common/FirebaseSharedSwift.xcframework"),
         .binaryTarget(name: "FirebaseStorage", path: "Frameworks/FirebaseStorage/FirebaseStorage.xcframework"),
         
         // Google
@@ -126,7 +137,7 @@ let package = Package(
         .binaryTarget(name: "abseil", path: "Frameworks/FirebaseFirestore/abseil.xcframework"),
         .binaryTarget(name: "gRPC-C++", path: "Frameworks/FirebaseFirestore/gRPC-C++.xcframework"),
         .binaryTarget(name: "gRPC-Core", path: "Frameworks/FirebaseFirestore/gRPC-Core.xcframework"),
-        .binaryTarget(name: "leveldb-library", path: "Frameworks/FirebaseFirestore/leveldb-library.xcframework"),
+        .binaryTarget(name: "leveldb-library", path: "Frameworks/Common/leveldb-library.xcframework"),
         .binaryTarget(name: "nanopb", path: "Frameworks/FirebaseAnalytics/nanopb.xcframework"),
     ]
 )
