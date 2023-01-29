@@ -73,6 +73,12 @@ let package = Package(
             ]
         ),
         .library(
+            name: "FirebaseDynamicLinks",
+            targets: [
+                "FirebaseDynamicLinks"
+            ]
+        ),
+        .library(
             name: "FirebaseFirestore",
             targets: [
                 "abseil",
@@ -101,21 +107,22 @@ let package = Package(
     dependencies: [ ],
     targets: [
         // Firebase
-        .binaryTarget(name: "FirebaseDatabase", path: "Frameworks/FirebaseDatabase/FirebaseDatabase.xcframework"),
-        .binaryTarget(name: "FirebaseDatabaseSwift", path: "Frameworks/FirebaseDatabase/FirebaseDatabaseSwift.xcframework"),
-        .binaryTarget(name: "FirebaseAppDistribution", path: "Frameworks/FirebaseAppDistribution/FirebaseAppDistribution.xcframework"),
         .binaryTarget(name: "FirebaseABTesting", path: "Frameworks/FirebaseABTesting/FirebaseABTesting.xcframework"),
         .binaryTarget(name: "FirebaseAnalytics", path: "Frameworks/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsOnDeviceConversion", path: "Frameworks/FirebaseAnalyticsOnDeviceConversion/FirebaseAnalyticsOnDeviceConversion.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsSwift", path: "Frameworks/FirebaseAnalytics/FirebaseAnalyticsSwift.xcframework"),
         .binaryTarget(name: "FirebaseAppCheck", path: "Frameworks/FirebaseAppCheck/FirebaseAppCheck.xcframework"),
         .binaryTarget(name: "FirebaseAppCheckInterop", path: "Frameworks/FirebaseStorage/FirebaseAppCheckInterop.xcframework"),
+        .binaryTarget(name: "FirebaseAppDistribution", path: "Frameworks/FirebaseAppDistribution/FirebaseAppDistribution.xcframework"),
         .binaryTarget(name: "FirebaseAuth", path: "Frameworks/FirebaseAuth/FirebaseAuth.xcframework"),
         .binaryTarget(name: "FirebaseAuthInterop", path: "Frameworks/FirebaseStorage/FirebaseAuthInterop.xcframework"),
         .binaryTarget(name: "FirebaseCore", path: "Frameworks/FirebaseAnalytics/FirebaseCore.xcframework"),
         .binaryTarget(name: "FirebaseCoreExtension", path: "Frameworks/Common/FirebaseCoreExtension.xcframework"),
         .binaryTarget(name: "FirebaseCoreInternal", path: "Frameworks/FirebaseAnalytics/FirebaseCoreInternal.xcframework"),
         .binaryTarget(name: "FirebaseCrashlytics", path: "Frameworks/FirebaseCrashlytics/FirebaseCrashlytics.xcframework"),
+        .binaryTarget(name: "FirebaseDatabase", path: "Frameworks/FirebaseDatabase/FirebaseDatabase.xcframework"),
+        .binaryTarget(name: "FirebaseDatabaseSwift", path: "Frameworks/FirebaseDatabase/FirebaseDatabaseSwift.xcframework"),
+        .binaryTarget(name: "FirebaseDynamicLinks", path: "Frameworks/FirebaseDynamicLinks/FirebaseDynamicLinks.xcframework"),
         .binaryTarget(name: "FirebaseFirestore", path: "Frameworks/FirebaseFirestore/FirebaseFirestore.xcframework"),
         .binaryTarget(name: "FirebaseFirestoreSwift", path: "Frameworks/FirebaseFirestore/FirebaseFirestoreSwift.xcframework"),
         .binaryTarget(name: "FirebaseInstallations", path: "Frameworks/FirebaseAnalytics/FirebaseInstallations.xcframework"),
