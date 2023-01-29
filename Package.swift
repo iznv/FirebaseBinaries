@@ -10,6 +10,12 @@ let package = Package(
     ],
     products: [
         .library(
+            name: "FirebaseABTesting",
+            targets: [
+                "FirebaseABTesting"
+            ]
+        ),
+        .library(
             name: "FirebaseAnalytics",
             targets: [
                 "FBLPromises",
@@ -68,6 +74,7 @@ let package = Package(
     targets: [
         .binaryTarget(name: "BoringSSL-GRPC", path: "Frameworks/FirebaseFirestore/BoringSSL-GRPC.xcframework"),
         .binaryTarget(name: "FBLPromises", path: "Frameworks/FirebaseAnalytics/FBLPromises.xcframework"),
+        .binaryTarget(name: "FirebaseABTesting", path: "Frameworks/FirebaseABTesting/FirebaseABTesting.xcframework"),
         .binaryTarget(name: "FirebaseAnalytics", path: "Frameworks/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsSwift", path: "Frameworks/FirebaseAnalytics/FirebaseAnalyticsSwift.xcframework"),
         .binaryTarget(name: "FirebaseAppCheckInterop", path: "Frameworks/FirebaseStorage/FirebaseAppCheckInterop.xcframework"),
@@ -92,6 +99,6 @@ let package = Package(
         .binaryTarget(name: "gRPC-C++", path: "Frameworks/FirebaseFirestore/gRPC-C++.xcframework"),
         .binaryTarget(name: "gRPC-Core", path: "Frameworks/FirebaseFirestore/gRPC-Core.xcframework"),
         .binaryTarget(name: "leveldb-library", path: "Frameworks/FirebaseFirestore/leveldb-library.xcframework"),
-        .binaryTarget(name: "nanopb", path: "Frameworks/FirebaseAnalytics/nanopb.xcframework")
+        .binaryTarget(name: "nanopb", path: "Frameworks/FirebaseAnalytics/nanopb.xcframework"),
     ]
 )
