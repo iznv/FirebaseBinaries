@@ -38,6 +38,12 @@ let package = Package(
             ]
         ),
         .library(
+            name: "FirebaseAppCheck",
+            targets: [
+                "FirebaseAppCheck"
+            ]
+        ),
+        .library(
             name: "FirebaseAuth",
             targets: [
                 "FirebaseAuth",
@@ -84,6 +90,7 @@ let package = Package(
         .binaryTarget(name: "FirebaseAnalytics", path: "Frameworks/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsOnDeviceConversion", path: "Frameworks/FirebaseAnalyticsOnDeviceConversion/FirebaseAnalyticsOnDeviceConversion.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsSwift", path: "Frameworks/FirebaseAnalytics/FirebaseAnalyticsSwift.xcframework"),
+        .binaryTarget(name: "FirebaseAppCheck", path: "Frameworks/FirebaseAppCheck/FirebaseAppCheck.xcframework"),
         .binaryTarget(name: "FirebaseAppCheckInterop", path: "Frameworks/FirebaseStorage/FirebaseAppCheckInterop.xcframework"),
         .binaryTarget(name: "FirebaseAuth", path: "Frameworks/FirebaseAuth/FirebaseAuth.xcframework"),
         .binaryTarget(name: "FirebaseAuthInterop", path: "Frameworks/FirebaseStorage/FirebaseAuthInterop.xcframework"),
