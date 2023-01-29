@@ -44,6 +44,12 @@ let package = Package(
             ]
         ),
         .library(
+            name: "FirebaseAppDistribution",
+            targets: [
+                "FirebaseAppDistribution"
+            ]
+        ),
+        .library(
             name: "FirebaseAuth",
             targets: [
                 "FirebaseAuth",
@@ -86,6 +92,7 @@ let package = Package(
     dependencies: [ ],
     targets: [
         // Firebase
+        .binaryTarget(name: "FirebaseAppDistribution", path: "Frameworks/FirebaseAppDistribution/FirebaseAppDistribution.xcframework"),
         .binaryTarget(name: "FirebaseABTesting", path: "Frameworks/FirebaseABTesting/FirebaseABTesting.xcframework"),
         .binaryTarget(name: "FirebaseAnalytics", path: "Frameworks/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsOnDeviceConversion", path: "Frameworks/FirebaseAnalyticsOnDeviceConversion/FirebaseAnalyticsOnDeviceConversion.xcframework"),
@@ -109,7 +116,7 @@ let package = Package(
         .binaryTarget(name: "GoogleAppMeasurement", path: "Frameworks/FirebaseAnalytics/GoogleAppMeasurement.xcframework"),
         .binaryTarget(name: "GoogleAppMeasurementIdentitySupport", path: "Frameworks/FirebaseAnalytics/GoogleAppMeasurementIdentitySupport.xcframework"),
         .binaryTarget(name: "GoogleAppMeasurementOnDeviceConversion", path: "Frameworks/FirebaseAnalyticsOnDeviceConversion/GoogleAppMeasurementOnDeviceConversion.xcframework"),
-        .binaryTarget(name: "GoogleDataTransport", path: "Frameworks/FirebaseCrashlytics/GoogleDataTransport.xcframework"),
+        .binaryTarget(name: "GoogleDataTransport", path: "Frameworks/Common/GoogleDataTransport.xcframework"),
         .binaryTarget(name: "GoogleUtilities", path: "Frameworks/FirebaseAnalytics/GoogleUtilities.xcframework"),
         
         // Other
