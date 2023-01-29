@@ -5,24 +5,32 @@ import PackageDescription
 
 let package = Package(
     name: "FirebaseBinaries",
+    platforms: [
+        .iOS(.v14)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "FirebaseBinaries",
-            targets: ["FirebaseBinaries"]),
+        .library(name: "FirebaseAnalytics",
+                 targets: ["FirebaseAnalytics"]),
+        .library(name: "FirebaseAuth",
+                 targets: ["FirebaseAuth"]),
+        .library(name: "FirebaseCrashlytics",
+                 targets: ["FirebaseCrashlytics"]),
+        .library(name: "FirebaseFirestore",
+                 targets: ["FirebaseFirestore"]),
+        .library(name: "FirebaseStorage",
+                 targets: ["FirebaseStorage"])
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
+    dependencies: [ ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "FirebaseBinaries",
-            dependencies: []),
-        .testTarget(
-            name: "FirebaseBinariesTests",
-            dependencies: ["FirebaseBinaries"]),
+        .binaryTarget(name: "FirebaseAnalytics",
+                      path: "Frameworks/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
+        .binaryTarget(name: "FirebaseAuth",
+                      path: "Frameworks/FirebaseAuth/FirebaseAuth.xcframework"),
+        .binaryTarget(name: "FirebaseCrashlytics",
+                      path: "Frameworks/FirebaseCrashlytics/FirebaseCrashlytics.xcframework"),
+        .binaryTarget(name: "FirebaseFirestore",
+                      path: "Frameworks/FirebaseFirestore/FirebaseFirestore.xcframework"),
+        .binaryTarget(name: "FirebaseStorage",
+                      path: "Frameworks/FirebaseStorage/FirebaseStorage.xcframework")
     ]
 )
