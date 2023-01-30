@@ -17,5 +17,5 @@ Add the `-ObjC` linker flag in your **Other Linker Settings** in your target's b
 Use this script to upload:
 
 ```shell
-"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/FirebaseBinaries/Frameworks/FirebaseCrashlytics/run"
+"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/FirebaseBinaries/Others/FirebaseCrashlytics/run"
 ```
