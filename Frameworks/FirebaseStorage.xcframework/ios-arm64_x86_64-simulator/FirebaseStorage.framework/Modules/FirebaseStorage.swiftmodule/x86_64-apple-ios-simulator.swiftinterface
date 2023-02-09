@@ -77,6 +77,7 @@ extension FirebaseStorage.StorageReference {
     @objc get
     @objc set
   }
+  @objc public var uploadChunkSizeBytes: Swift.Int64
   @objc public var callbackQueue: Dispatch.DispatchQueue {
     @objc get
     @objc set(newValue)

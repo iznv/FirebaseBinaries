@@ -43,8 +43,7 @@ let package = Package(
         .library(
             name: "FirebaseAppDistribution",
             targets: [
-                "FirebaseAppDistribution",
-                "GoogleDataTransport"
+                "FirebaseAppDistribution"
             ]
         ),
         .library(
