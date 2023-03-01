@@ -56,8 +56,11 @@ let package = Package(
         .library(
             name: "FirebaseCrashlytics",
             targets: [
+                "FirebaseCoreExtension",
                 "FirebaseCrashlytics",
-                "GoogleDataTransport"
+                "FirebaseSessions",
+                "GoogleDataTransport",
+                "PromisesSwift"
             ]
         ),
         .library(
@@ -129,9 +132,12 @@ let package = Package(
             name: "FirebasePerformance",
             targets: [
                 "FirebaseABTesting",
+                "FirebaseCoreExtension",
                 "FirebasePerformance",
                 "FirebaseRemoteConfig",
-                "GoogleDataTransport"
+                "FirebaseSessions",
+                "GoogleDataTransport",
+                "PromisesSwift"
             ]
         ),
         .library(
@@ -233,6 +239,8 @@ let package = Package(
                       path: "Frameworks/FirebaseRemoteConfig.xcframework"),
         .binaryTarget(name: "FirebaseRemoteConfigSwift",
                       path: "Frameworks/FirebaseRemoteConfigSwift.xcframework"),
+        .binaryTarget(name: "FirebaseSessions",
+                      path: "Frameworks/FirebaseSessions.xcframework"),
         .binaryTarget(name: "FirebaseSharedSwift",
                       path: "Frameworks/FirebaseSharedSwift.xcframework"),
         .binaryTarget(name: "FirebaseStorage",
@@ -257,6 +265,8 @@ let package = Package(
                       path: "Frameworks/GoogleUtilities.xcframework"),
         .binaryTarget(name: "Libuv-gRPC",
                       path: "Frameworks/Libuv-gRPC.xcframework"),
+        .binaryTarget(name: "PromisesSwift",
+                      path: "Frameworks/PromisesSwift.xcframework"),
         .binaryTarget(name: "SwiftProtobuf",
                       path: "Frameworks/SwiftProtobuf.xcframework"),
         .binaryTarget(name: "UserMessagingPlatform",
