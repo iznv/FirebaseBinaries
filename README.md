@@ -8,7 +8,7 @@ Add **FirebaseBinaries** package to your target:
 https://github.com/iznv/FirebaseBinaries
 ```
 
-Add the `-ObjC` linker flag in your **Other Linker Settings** in your target's build settings.
+Add the `-ObjC` linker flag in your **Other Linker Flags** in your target's build settings.
 
 ## Usage
 
